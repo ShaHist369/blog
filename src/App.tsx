@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Main from './pages/main/main'
+import Auth from './pages/auth/auth'
+import Single from './pages/single/single'
+import {Route, Switch} from 'react-router-dom'
+import CreateArticle from './pages/create-article/create-article'
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Switch>
+            <Route path='/auth'  render={()=> <Auth />} />
+            <Route path='/article/:id' render={()=> <Single />} />
+            {localStorage.isUserAuthorized ?
+                <Route
+                    path='/create-article'
+                    render={()=> <CreateArticle />}
+                /> : null }
+
+            <Route path='/' exact render={()=> <Main />}/>
+            <Route render={()=> <div>404 not found</div>}/>
+        </Switch>
     </div>
   );
 }

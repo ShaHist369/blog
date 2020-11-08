@@ -1,0 +1,51 @@
+.tab a{
+    text-decoration: none;
+    color:white;
+}
+.tabs{
+    width:70%;
+    margin-left:10px;
+    display:inline-flex;
+    justify-content: center;
+}
+.tab{
+    border-radius: 10px 10px 0px 0px;
+    margin-left:10px;
+    margin-top:10px;
+    display:inline-flex;
+    background: #474E5E;
+}
+.tab p{
+    margin-left:10px;
+}
+.close-tab{
+    background: white;
+    margin-left:10px;
+    margin-top:20px;
+    margin-right: 10px;
+    width:15px;
+    height: 15px;
+    border-radius:50%;
+}
+.first-close-line{
+    position:relative;
+    content:" ";
+    width:10px;
+    height: 1px;
+    background: black;
+    border-radius: 5px;
+    top:7px;
+    left:2px;
+    transform: translateY(-50%) rotate(45deg);
+}
+.second-close-line{
+    position:relative;
+    content:" ";
+    width:10px;
+    height: 1px;
+    background: black;
+    border-radius: 5px;
+    top:5px;
+    left:2px;
+    transform: translateY(50%) rotate(-45deg);
+}

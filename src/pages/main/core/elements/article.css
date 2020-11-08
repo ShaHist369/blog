@@ -1,0 +1,47 @@
+article{
+    display:block;
+    border: 2px solid black;
+    margin-top:30px;
+    border-radius: 5px;
+}
+.block-article{
+    display:inline-flex;
+    width:100%;
+}
+.margin-left{
+    margin-left:10px;
+}
+.keys-article{
+    position: relative;
+    width:20%;
+    background: #C4C4C4;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.key-function{
+    position: absolute;
+    bottom: 0px;
+}
+.last-bracket{
+    position: relative;
+    padding-left:10px;
+    width:20%;
+    background: #C4C4C4;
+}
+.last-bracket p{
+    position: absolute;
+    bottom: 0px;
+}
+.values-article{
+    width:60%;
+    margin-bottom: 10px;
+}
+.button-read{
+    display: inline-flex;
+    width:100%;
+    justify-content: center;
+}
+.button-read p{
+    margin-block-start: 5px;
+    margin-block-end: 0em;
+}

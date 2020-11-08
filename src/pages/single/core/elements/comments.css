@@ -1,0 +1,21 @@
+.comment-symbol{
+    width:100%;
+    background: #C4C4C4;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.comment{
+    width:100%;
+    margin-top: 30px;
+    padding: 10px;
+    display: inline-flex;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.person img{
+    width:100px;
+}
+.comment-text{
+    width:100%;
+    margin-left: 10px;
+}
