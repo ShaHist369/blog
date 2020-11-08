@@ -3,6 +3,7 @@ import Search from './elements/search'
 import Article from './elements/article'
 import {useSelector} from 'react-redux'
 import {NavLink} from "react-router-dom";
+import './core.css'
 
 export type TypeArticle = {
     title: string
@@ -25,12 +26,17 @@ export const Core:()=> JSX.Element = () =>{
     return(
         <>
             <Search setFilter={setFilter}/>
-            {localStorage.isUserAuthorized ? <NavLink to={'/create-article'}>create article</NavLink> : null }
+            {localStorage.isUserAuthorized ?
+                <div className={'create-article-link'}>
+                    <NavLink to={'/create-article'}>
+                        <button>create article()</button>
+                    </NavLink>
+                </div> : null }
             {filteredArticles.map(article => <Article
                 key={article.id}
                 id={article.id}
                 title={article.title}
-                description={article.description}
+                description={article.description.substr(0, 256) + ' . . .'}
             />)}
         </>
     )

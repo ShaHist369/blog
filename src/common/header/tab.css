@@ -26,6 +26,7 @@
     width:15px;
     height: 15px;
     border-radius:50%;
+    cursor: pointer;
 }
 .first-close-line{
     position:relative;

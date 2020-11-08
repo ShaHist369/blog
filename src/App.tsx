@@ -4,16 +4,19 @@ import Auth from './pages/auth/auth'
 import Single from './pages/single/single'
 import {Route, Switch} from 'react-router-dom'
 import CreateArticle from './pages/create-article/create-article'
+import {useSelector} from "react-redux";
 
 
 
 function App() {
+
+    const isUserAuthorized = useSelector((state:any )=> state.auth.isUserAuthorized)
   return (
     <div className="App">
         <Switch>
             <Route path='/auth'  render={()=> <Auth />} />
             <Route path='/article/:id' render={()=> <Single />} />
-            {localStorage.isUserAuthorized ?
+            {isUserAuthorized ?
                 <Route
                     path='/create-article'
                     render={()=> <CreateArticle />}
